@@ -16,4 +16,15 @@
 >p tag
 ```text
    git status
+   git add .
+
+   2단계: commit, push
+   local - where? - server
+            commit - push
+
+   git commit -m "메시지"
+   git status
+
+   git log
+   git push origin <branch>
 ```
