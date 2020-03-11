@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const TitleContainer = styled.div`
-   font-size: 31px;
-   font-weight: bold;
-   padding: 20px 10px;
-   border-bottom: 1px solid #efefef;
+  font-size: 31px;
+  font-weight: bold;
+  padding: 20px 10px;
+  border-bottom: 1px solid #efefef;
 `
 
 function Title({ title }) {
@@ -15,7 +15,7 @@ function Title({ title }) {
 }
 
 Title.propTypes = {
-   title: PropTypes.string,
+  title: PropTypes.string,
 }
 
 export default Title

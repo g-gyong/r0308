@@ -18,7 +18,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint **/*.js",
-    "prettier": "prettier --write \"**/*.{js,json,ts,tsx}\""
+    "prettier": "prettier --write \"**/*.{js,json,ts,tsx}\"",
+    "docs": "start-storybook -p 6006"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +46,12 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "eslint-plugin-standard": "^4.0.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-docs": "^5.3.8",
+    "@storybook/addon-knobs": "^5.3.8",
+    "@storybook/addon-links": "^5.3.8",
+    "@storybook/addons": "^5.3.8",
+    "@storybook/react": "^5.3.8"
   }
 }

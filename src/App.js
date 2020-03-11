@@ -3,9 +3,9 @@ import Title from './components/title'
 
 function App() {
   return (
-  <div className="App">
-    <Title title="main page"/>
-  </div>
+    <div className="App">
+      <Title title="main page" />
+    </div>
   )
 }
 
