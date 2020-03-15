@@ -30,7 +30,6 @@ git status
 git push origin <branch>
 
 ````
-<hr />
 >## 필기
 
 >>```text
@@ -62,3 +61,14 @@ export : 여러 개의 객체를 내보냄 {  }에 이름을 써준다.
 
 npm install : 변경된 패키지만 설치
 ````
+
+## branch
+```
+git checkout -> 이미 생산된 브랜치로 이동
+git checkout -b feature-add-text -> 브랜치 생성(마스터에서 피쳐로 이름이 바뀜, 마스터와 분리된 환경 작업)
+```
+
+```
+return 생략시 => () 사용
+<> </> 빈괄호 안 내용을 반환
+```
