@@ -29,8 +29,7 @@ git status
 
 4단계: git log  
 git push origin <branch>
-
-````
+```
 >## 필기
 
 >>```text
@@ -61,16 +60,15 @@ export : 여러 개의 객체를 내보냄 {  }에 이름을 써준다.
 --dev : 개발단계에만 필요(서비스 X)
 
 npm install : 변경된 패키지만 설치
-
-git push origin branch이름 : 해당 브렌치에 상태 반영
-git pull origin master : 서버의 최신 상태 반영
 ````
 
+# 0315
 ## branch
-
 ```
-git checkout -> 이미 생산된 브랜치로 이동
+git checkout 브랜치이름-> 이미 생산된 브랜치로 이동
 git checkout -b feature-add-text -> -b 브랜치 생성(마스터에서 피쳐로 이름이 바뀜, 마스터와 분리된 환경 작업 생성)
+git push origin branch이름 : 해당 브렌치에 상태 반영
+git pull origin master : 서버의 최신 상태 반영
 ```
 
 ```
