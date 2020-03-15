@@ -14,6 +14,7 @@
       return ...
    }
 ```
+
 <br />
 ```text
 1단계: git status   
@@ -63,12 +64,13 @@ npm install : 변경된 패키지만 설치
 ````
 
 ## branch
+
 ```
 git checkout -> 이미 생산된 브랜치로 이동
 git checkout -b feature-add-text -> 브랜치 생성(마스터에서 피쳐로 이름이 바뀜, 마스터와 분리된 환경 작업)
 ```
 
 ```
-return 생략시 => () 사용
-<> </> 빈괄호 안 내용을 반환
+return 생략시 => ( ) 사용
+<> </> 빈괄호 안 내용을 반환 (<React를 생략한 것>)
 ```
