@@ -29,7 +29,8 @@ git status
 
 4단계: git log  
 git push origin <branch>
-```
+
+````
 >## 필기
 
 >>```text
@@ -63,10 +64,12 @@ npm install : 변경된 패키지만 설치
 ````
 
 # 0315
+
 ## branch
+
 ```
 git checkout 브랜치이름-> 이미 생산된 브랜치로 이동
-git checkout -b feature-add-text -> -b 브랜치 생성(마스터에서 피쳐로 이름이 바뀜, 마스터와 분리된 환경 작업 생성)
+git checkout -b 브랜치이름 -> -b 브랜치 생성(마스터에서 뉴 브랜치로 이름이 바뀜, 마스터와 분리된 환경 작업 생성)
 git push origin 브랜치이름 : 해당 브렌치에 상태 반영
 git pull origin master : 서버의 최신 상태 반영
 ```
@@ -75,4 +78,26 @@ git pull origin master : 서버의 최신 상태 반영
 return 생략시 => ( ) 사용
 <> </> 빈괄호 안 내용을 반환 (<React를 생략한 것>)
 addon-knobs : select('props', [선택자들], '기본값)
+```
+
+#0322
+
+```
+props를 받아오면 컴포넌트의 인자(프롭스)의 PropTypes 정의해줘야함
+해체할당자 { a, b, c }
+Route path 사용시 중복되는 패스가 있으면 exact를 붙여 해당 패스에만 이동되도록 설정
+<Route exact path="" />
+
+부모 스타일 속성 상속: 임포트 후 const 이름 = styled(부모컴포넌트명)`스타일`
+useEffect는 비동기 지원이 안되므로 따로 설정해줘야함
+컴포넌트의 onClick은 그냥 이름
+
+Context는 1. provider 2. consumer 를 이용
+
+ContextAPI 사용??
+1. 페이지가 달라지는데 state가 유지되어야할떄
+2. state가 복잡할 때
+3. 렌더링
+
+뒤로가기해도 페이지 유지? -> Hash 사용해야함
 ```
