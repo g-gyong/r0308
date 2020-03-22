@@ -20,7 +20,7 @@ function Webtoons() {
   return (
     <Container>
       {webtoons.map((webtoon, i) => (
-        <Webtoon key={i} source={webtoon}/>
+        <Webtoon key={i} source={webtoon} />
       ))}
     </Container>
   )

@@ -37,6 +37,12 @@ export const Container = styled.div`
     position : ${position};
   `}
   
+  ${({ display }) =>
+    display &&
+    `
+    display : ${display};
+  `}
+  
   ${({ centered }) =>
     centered &&
     `
@@ -46,7 +52,7 @@ export const Container = styled.div`
   ${({ textAlign }) =>
     textAlign &&
     `
-    text-aligh: ${textAlign};
+    text-align: ${textAlign};
   `}
   
 `

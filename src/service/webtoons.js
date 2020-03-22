@@ -16,7 +16,7 @@ export async function fetchWebtoons() {
       title: '외모지상주의',
       src:
         'https://shared-comic.pstatic.net/thumb/webtoon/641253/thumbnail/title_thumbnail_20141120112141_t83x90.jpg',
-      updated: false,
+      updated: true,
     },
   ]
   return response
