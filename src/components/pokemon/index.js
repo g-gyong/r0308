@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Detail from './detail'
 import List from './list'
-import { Container, Text } from '../../design-system'
+import { Container } from '../../design-system'
 
 function Pokemon() {
   /* 부모에서 상태 공유

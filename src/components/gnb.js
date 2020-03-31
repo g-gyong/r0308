@@ -23,6 +23,10 @@ const LINKS = [
     path: 'pokemon',
     label: 'pokemon',
   },
+  {
+    path: 'todo',
+    label: 'todo',
+  },
 ]
 
 function Gnb({ title }) {
@@ -32,12 +36,11 @@ function Gnb({ title }) {
       <Text fontSize="31" bold>
         {title}
       </Text>
-      {LINKS.map(({ path, label }, i ) => (
+      {LINKS.map(({ path, label }, i) => (
         <Link to={path} key={i}>
           {label}
         </Link>
-        )
-      )}
+      ))}
     </GnbContainer>
   )
 }

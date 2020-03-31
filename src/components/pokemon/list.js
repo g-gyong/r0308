@@ -16,7 +16,8 @@ function List() {
       setPokemons(await fetchPokemons())
     }
     fetchAndSetPokemons()
-  }, [])
+  }, []) //dependency가 빈배열이므로 useEffect 안의 내용을 한번 돌린 후 실행됨
+  //useEffect는 DOM 렌더링 이후 매번 수행
 
   console.log('pokemons', pokemons)
 

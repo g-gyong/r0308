@@ -80,13 +80,13 @@ return 생략시 => ( ) 사용
 addon-knobs : select('props', [선택자들], '기본값)
 ```
 
-#0322
+# 0322
 
 ```
 props를 받아오면 컴포넌트의 인자(프롭스)의 PropTypes 정의해줘야함
-해체할당자 { a, b, c }
+해체할당자 : { a, b, c }
 Route path 사용시 중복되는 패스가 있으면 exact를 붙여 해당 패스에만 이동되도록 설정
-<Route exact path="" />
+<Route exact path="" /> ex) / 루트와 /main 이 있다면 /가 중복 돼 /에 exact 붙이기
 
 부모 스타일 속성 상속: 임포트 후 const 이름 = styled(부모컴포넌트명)`스타일`
 useEffect는 비동기 지원이 안되므로 따로 설정해줘야함
@@ -99,5 +99,31 @@ ContextAPI 사용??
 2. state가 복잡할 때
 3. 렌더링
 
-뒤로가기해도 페이지 유지? -> Hash 사용해야함
+뒤로가기해도 페이지 유지? -> HashRouter 사용 .../#/경로
+
+번들링 후 netlify에서 무료 배포
+
+REDUX : 단방향 흐름 상태 관리
+인풋 -> 액션(시작) -> 리듀서(액션 실행) -> 스토어(상태저장) -> 바디
+
+jsonServer 만들기
+npx json-server --watch db.json(파일명) --port 포트번호
+npx : 패키지 무설치 실행 <-> npm : 패키지 설치 실행
+
+a as b => b를 a로 이름을 변경 b : a와 같은 의미
+ex) const { Provider, MyConsumer as Consumer } = Context
+    const { Provider, Consumer : MyConsumer } = Context
+
+{children} : 내용이 바뀌는 곳
+```
+
+# 0329
+
+```
+리듀서 사용하는 이유 : state관리를 한번에 하여 렌더링을 줄임, 단방향 흐름
+reducer(state, action) -> 고정 매개변수
+리듀서를 실행하기 위해 useReducer 사용
+dispatch : action을 일으키는 함수를 전달
+useEffect는 async 지원 안하므로 안에 한번 더 async 함수 만들어주기
+디펜던시에 의존 안하겠다는 주석 : // eslint-disable-line react-hooks/exhaustive-deps
 ```

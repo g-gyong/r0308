@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Container, Text } from '../../design-system'
+import { Container } from '../../design-system'
 import { usePokemonContext } from './context'
 
 function Detail() {

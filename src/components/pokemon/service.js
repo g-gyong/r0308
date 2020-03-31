@@ -6,9 +6,10 @@ export async function fetchPokemons() {
     return []
   }
 
-  const { results } = await response.json()
+  const { results } = await response.json() //await = .then 대신 값을 가져오는 비동기 함수
   return results
 }
+
 export async function fetchPokemon(url) {
   const response = await fetch(url)
 
