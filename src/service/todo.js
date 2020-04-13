@@ -15,7 +15,11 @@ export async function insertTodo(payload) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-    }, //바디에 무언가를 넘겨주려면 헤더의 타입 정의가 필요함
+    },
+    /*body에 데이터를 넘겨주려면 header의 type 정의가 필요함, 
+    대부분의 API에서 활용하는 Content-Type 헤더로써 
+    application/json으로 payload와 함께 HTTP 요청을 하게 되면
+     서버가 JSON 타입으로 변환해서 사용한다.*/
     body: JSON.stringify(payload),
   })
 

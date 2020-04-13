@@ -124,6 +124,14 @@ ex) const { Provider, MyConsumer as Consumer } = Context
 reducer(state, action) -> 고정 매개변수
 리듀서를 실행하기 위해 useReducer 사용
 dispatch : action을 일으키는 함수를 전달
+
 useEffect는 async 지원 안하므로 안에 한번 더 async 함수 만들어주기
+
 디펜던시에 의존 안하겠다는 주석 : // eslint-disable-line react-hooks/exhaustive-deps
+
+keyCode : enter는 13번 ex) event.keyCode === 13 ?
+onChange 이벤트는 value가 변경될 때 트리거됨
+
+body에 데이터를 넘겨주려면 header의 type 정의가 필요함, 대부분의 API에서 활용하는 Content-Type 헤더로써 application/json으로 payload와 함께 HTTP 요청을 하게 되면 서버가 JSON 타입으로 변환해서 사용한다.
+payload : server가 push를 보낼 때, 담은 어떤 data 즉 내가 전달하고자 하는 '값' 부분
 ```

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Text = styled.div`
     ${({ fontSize }) =>
@@ -23,5 +23,11 @@ export const Text = styled.div`
     inlineBlock &&
     `
     display : inline-block;
+    `}
+
+  ${({ color }) =>
+    color &&
+    `
+    color : ${color};
     `}
 `
