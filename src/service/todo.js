@@ -1,7 +1,7 @@
 // 서버 메소드 : GET, POST(값을 서버로 요청), DELETE, PUT
 
 export async function getTodos() {
-  const response = await fetch('http://localhost:8000/todos') //fetch의 기본메소드가 get이라 생략함
+  const response = await fetch('http://localhost:5000/todos') //fetch의 기본메소드가 get이라 생략함
 
   if (!response.ok) {
     return []
@@ -11,7 +11,7 @@ export async function getTodos() {
 }
 
 export async function insertTodo(payload) {
-  const response = await fetch('http://localhost:8000/todos', {
+  const response = await fetch('http://localhost:5000/todos', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export async function insertTodo(payload) {
 }
 
 export async function updateTodo(payload) {
-  const response = await fetch(`http://localhost:8000/todos/${payload.id}`, {
+  const response = await fetch(`http://localhost:5000/todos/${payload.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export async function updateTodo(payload) {
 }
 
 export async function deleteTodo(id) {
-  const response = await fetch(`http://localhost:8000/todos/${id}`, {
+  const response = await fetch(`http://localhost:5000/todos/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',

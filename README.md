@@ -9,15 +9,16 @@
    [link](url)
    **strong**
 
-```js
+```
    function fn(){
       return ...
    }
 ```
 
-<br />
-```text
-1단계: git status   
+---
+
+text
+1단계: git status  
 git add .
 
 2단계: commit, push  
@@ -30,10 +31,11 @@ git status
 4단계: git log  
 git push origin <branch>
 
-````
->## 필기
+---
 
->>```text
+## 필기
+
+text
 readme.md : 마크다운언어 -> 깃헙에서 이걸로 소통
 
 npm run lint : 규칙 어긋난 코딩을 잡아줌
@@ -53,7 +55,7 @@ state: 내가 가진 값
 props: 누군가를 통해 받은 값
 
 export defualt : 한 개만 내보냄
-export : 여러 개의 객체를 내보냄 {  }에 이름을 써준다.
+export : 여러 개의 객체를 내보냄 { }에 이름을 써준다.
 
 컴포넌트 명은 항상 앞에 대문자
 
@@ -61,28 +63,22 @@ export : 여러 개의 객체를 내보냄 {  }에 이름을 써준다.
 --dev : 개발단계에만 필요(서비스 X)
 
 npm install : 변경된 패키지만 설치
-````
 
 # 0315
 
 ## branch
 
-```
 git checkout 브랜치이름-> 이미 생산된 브랜치로 이동
 git checkout -b 브랜치이름 -> -b 브랜치 생성(마스터에서 뉴 브랜치로 이름이 바뀜, 마스터와 분리된 환경 작업 생성)
 git push origin 브랜치이름 : 해당 브렌치에 상태 반영
 git pull origin master : 서버의 최신 상태 반영
-```
 
-```
 return 생략시 => ( ) 사용
 <> </> 빈괄호 안 내용을 반환 (<React를 생략한 것>)
 addon-knobs : select('props', [선택자들], '기본값)
-```
 
 # 0322
 
-```
 props를 받아오면 컴포넌트의 인자(프롭스)의 PropTypes 정의해줘야함
 해체할당자 : { a, b, c }
 Route path 사용시 중복되는 패스가 있으면 exact를 붙여 해당 패스에만 이동되도록 설정
@@ -95,6 +91,7 @@ useEffect는 비동기 지원이 안되므로 따로 설정해줘야함
 Context는 1. provider 2. consumer 를 이용
 
 ContextAPI 사용??
+
 1. 페이지가 달라지는데 state가 유지되어야할떄
 2. state가 복잡할 때
 3. 렌더링
@@ -106,21 +103,23 @@ ContextAPI 사용??
 REDUX : 단방향 흐름 상태 관리
 인풋 -> 액션(시작) -> 리듀서(액션 실행) -> 스토어(상태저장) -> 바디
 
-jsonServer 만들기
-npx json-server --watch db.json(파일명) --port 포트번호
-npx : 패키지 무설치 실행 <-> npm : 패키지 설치 실행
+### jsonServer 만들기
+
+1. npx json-server --watch db.json(파일명) --port 포트번호
+   npx : 패키지 무설치 실행(1회성) <-> npm : 패키지 설치 실행
+2. npx serve -s build : 내가 지정한 포트번호로 서버를 1회 켜줌
+
+---
 
 a as b => b를 a로 이름을 변경 b : a와 같은 의미
 ex) const { Provider, MyConsumer as Consumer } = Context
-    const { Provider, Consumer : MyConsumer } = Context
+const { Provider, Consumer : MyConsumer } = Context
 
 {children} : 내용이 바뀌는 곳
-```
 
 # 0329
 
-```
-리듀서 사용하는 이유 : state관리를 한번에 하여 렌더링을 줄임, 단방향 흐름
+리듀서 사용하는 이유 : state관리를 한번에 하여 렌더링을 줄임, 단방향 흐름 <-> useState()는 업데이트 될 때마다 렌더링되어 간단한 앱에만 사용
 reducer(state, action) -> 고정 매개변수
 리듀서를 실행하기 위해 useReducer 사용
 dispatch : action을 일으키는 함수를 전달
@@ -134,4 +133,3 @@ onChange 이벤트는 value가 변경될 때 트리거됨
 
 body에 데이터를 넘겨주려면 header의 type 정의가 필요함, 대부분의 API에서 활용하는 Content-Type 헤더로써 application/json으로 payload와 함께 HTTP 요청을 하게 되면 서버가 JSON 타입으로 변환해서 사용한다.
 payload : server가 push를 보낼 때, 담은 어떤 data 즉 내가 전달하고자 하는 '값' 부분
-```

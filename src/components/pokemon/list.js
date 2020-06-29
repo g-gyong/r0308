@@ -19,16 +19,14 @@ function List() {
   }, []) //dependency가 빈배열이므로 useEffect 안의 내용을 한번 돌린 후 실행됨
   //useEffect는 DOM 렌더링 이후 매번 수행
 
-  console.log('pokemons', pokemons)
-
   const handleClickPokemon = async (url) => {
     setPokemon(await fetchPokemon(url))
   }
 
   return (
-    <ListFrame display="inline-block" width="250">
+    <ListFrame display="inline-block">
       {pokemons.map(({ name, url }, i) => (
-        <Text key={i} onClick={() => handleClickPokemon(url)}>
+        <Text key={i} onClick={() => handleClickPokemon(url)} style={{padding:3, cursor:"pointer"}}>
           {name}
         </Text>
       ))}

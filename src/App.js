@@ -10,21 +10,21 @@ import PokemonPage from './pages/pokemon'
 import TodoPage from './pages/todo'
 
 function App() {
-  return (
-    <BrowserRouter>
-      <GlobalStyle />
-      <Container>
-        <Gnb title="Navbar" />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/webtoon" component={WebtoonsPage} />
-          <Route path="/pokemon" component={PokemonPage} />
-          <Route path="/todo" component={TodoPage} />
-          <Route component={() => <div>404: Error</div>} />
-        </Switch>
-      </Container>
-    </BrowserRouter>
-  )
+	return (
+		<BrowserRouter>
+			<GlobalStyle />
+			<Container>
+				<Gnb title="Navbar" />
+				<Switch>
+					<Route exact path="/" component={HomePage} />
+					<Route path="/webtoon" component={WebtoonsPage} />
+					<Route path="/pokemon" component={PokemonPage} />
+					<Route path="/todo" component={TodoPage} />
+					<Route component={() => <div>404: Error</div>} />
+				</Switch>
+			</Container>
+		</BrowserRouter>
+	)
 }
 
 export default App
